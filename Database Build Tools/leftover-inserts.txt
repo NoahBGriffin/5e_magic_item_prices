@@ -1,0 +1,37 @@
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Crystal Ball', 'Wondrous Item', 'very rare', 'The typical crystal ball, a very rare item, is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Crystal Ball of Mind Reading', 'Wondrous Item', 'legendary', 'This crystal ball is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it. You can use an action to cast the detect thoughts spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell''s sensor. You don''t need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Crystal Ball of Telepathy', 'Wondrous Item', 'legendary', 'This crystal ball is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it. While scrying with the crystal ball, you can communicate telepathically with creatures you can see within 30 feet of the spell''s sensor. You can also use an action to cast the suggestion spell (save DC 17) through the sensor on one of those creatures. You don''t need to concentrate on this suggestion to maintain it during its duration, but it ends if scrying ends. Once used, the suggestion power of the crystal ball can''t be used again until the next dawn.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Crystal Ball of True Seeing', 'Wondrous Item', 'legendary', 'This crystal ball is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it. While scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell''s sensor.', 'requires attunement');
+
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Belt of Hill Giant Strength', 'Wondrous Item', 'rare', 'While wearing this belt, your Strength score changes to 21. The item has no effect on you if your Strength without the belt is equal to or greater than 21.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Belt of Frost Giant Strength', 'Wondrous Item', 'very rare', 'While wearing this belt, your Strength score changes to 23. The item has no effect on you if your Strength without the belt is equal to or greater than 23.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Belt of Stone Giant Strength', 'Wondrous Item', 'very rare', 'While wearing this belt, your Strength score changes to 23. The item has no effect on you if your Strength without the belt is equal to or greater than 23.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Belt of Fire Giant Strength', 'Wondrous Item', 'very rare', 'While wearing this belt, your Strength score changes to 25.  The item has no effect on you if your Strength without the belt is equal to or greater than 25.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Belt of Cloud Giant Strength', 'Wondrous Item', 'legendary', 'While wearing this belt, your Strength score changes to 27. The item has no effect on you if your Strength without the belt is equal to or greater than 27.', 'requires attunement');
+INSERT INTO magic_item(item_name, item_type, rarity, description, attunement)
+VALUES('Belt of Storm Giant Strength', 'Wondrous Item', 'legendary', 'While wearing this belt, your Strength score changes to 27. The item has no effect on you if your Strength without the belt is equal to or greater than 27.', 'requires attunement');
+
+INSERT INTO magic_item(item_name, item_type, rarity, description)
+VALUES('Potion of Healing', 'Potion', 'common', 'You regain 2d4 + 2 hit points when you drink this potion. The potion''s red liquid glimmers when agitated.');
+INSERT INTO magic_item(item_name, item_type, rarity, description)
+VALUES('Potion of Greater Healing', 'Potion', 'uncommon', 'You regain 4d4 + 4 hit points when you drink this potion. The potion''s red liquid glimmers when agitated.');
+INSERT INTO magic_item(item_name, item_type, rarity, description)
+VALUES('Potion of Superior Healing', 'Potion', 'rare', 'You regain 8d4 + 8 hit points when you drink this potion. The potion''s red liquid glimmers when agitated.');
+INSERT INTO magic_item(item_name, item_type, rarity, description)
+VALUES('Potion of Supreme Healing', 'Potion', 'very rare', 'You regain 10d4 + 20 hit points when you drink this potion. The potion''s red liquid glimmers when agitated.');
+
+INSERT INTO magic_item(item_name, item_type, rarity, description)
+VALUES('Figurine of Wonderous Power (Bronze Griffon)', 'Wondrous Item', 'rare', 'A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn''t enough space for the creature, the figurine doesn''t become a creature.
+\nThe creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions.
+\nThe creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can''t be used again until a certain amount of time has passed, as specified in the figurine''s description.
+\nBronze Griffon. This bronze statuette is of a griffon rampant. It can become a griffon for up to 6 hours. Once it has been used, it can''t be used again until 5 days have passed.');
+
