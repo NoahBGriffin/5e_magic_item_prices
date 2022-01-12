@@ -1,17 +1,9 @@
 package com.MagicItemGrabber.dao;
 
-import com.MagicItemGrabber.MagicItemLoaderCLI;
 import com.MagicItemGrabber.model.MagicItem;
-import lombok.NoArgsConstructor;
 import org.apache.commons.dbcp2.BasicDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
-import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
