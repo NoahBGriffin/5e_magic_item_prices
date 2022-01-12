@@ -1,21 +1,34 @@
 package com.MagicItemGrabber.dao;
 
+import com.MagicItemGrabber.MagicItemLoaderCLI;
 import com.MagicItemGrabber.model.MagicItem;
+import lombok.NoArgsConstructor;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
+import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class JdbcMagicItemDAO implements MagicItemDAO {
 
-    private final JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
-    public JdbcMagicItemDAO(DataSource dataSource) {
+    public JdbcMagicItemDAO() {
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setUrl(System.getenv("APP_DB_URL"));
+        dataSource.setUsername(System.getenv("APP_DB_USER"));
+        dataSource.setPassword(System.getenv("APP_DB_PASS"));
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
-
 
     @Override
     public List<MagicItem> addAllItems(List<MagicItem> items) {

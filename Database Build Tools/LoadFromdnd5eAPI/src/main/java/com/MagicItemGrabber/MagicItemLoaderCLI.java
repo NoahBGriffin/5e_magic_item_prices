@@ -4,38 +4,35 @@ import com.MagicItemGrabber.dao.JdbcMagicItemDAO;
 import com.MagicItemGrabber.dao.MagicItemDAO;
 import com.MagicItemGrabber.model.MagicItem;
 import com.MagicItemGrabber.services.MagicItemService;
-import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.sql.DataSource;
 import java.util.List;
 
+@Component
 public class MagicItemLoaderCLI {
 
-    private final MagicItemService magicItemService;
-    private final MagicItemDAO magicItemDAO;
+    private MagicItemService magicItemService;
+    private MagicItemDAO magicItemDAO;
+
 
     public static void main(String[] args) {
-        BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/MagicItems");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("postgres1");
-
-        MagicItemLoaderCLI magicItemLoaderCLI = new MagicItemLoaderCLI(dataSource);
+        MagicItemLoaderCLI magicItemLoaderCLI = new MagicItemLoaderCLI();
         magicItemLoaderCLI.run();
     }
 
-    public MagicItemLoaderCLI(DataSource dataSource) {
+    public MagicItemLoaderCLI() {
         magicItemService = new MagicItemService();
-        magicItemDAO = new JdbcMagicItemDAO(dataSource);
+        magicItemDAO = new JdbcMagicItemDAO();
     }
 
     private void run() {
         List<MagicItem> items = magicItemService.getAllItems();
-//        for (MagicItem item : items) {
-//            if (item.getRarity().length() > 15) {
-//                System.out.println(item);
-//            }
-//        }
+
         List<MagicItem> leftovers = magicItemDAO.addAllItems(items);
         System.out.println("Done\n\n");
         for (MagicItem item : leftovers) {
